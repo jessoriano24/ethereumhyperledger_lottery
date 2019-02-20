@@ -65,7 +65,7 @@ Once the draw winner was done, the user winner can now withdraw. To withdraw, fi
 
 "# recurring_loterry_hyperledger.xml" 
 1. Register user
-First the user need to register, then run the app. The system will set the duration time and have a new round once the duration time is done. It can be second, minutes, hours or day. Once the duration time was set, It will inserted on the world state.
+First the user need to register, then run the app. It will submit the commitment hash and generates address and secret number. Then get the user's generated address to add on the list of Id's
 2. Buy ticket
 After the user bought the ticket, it will get the user's identity and add to the list of Id's and inserted on the world state.
 3. Draw winner
@@ -73,6 +73,23 @@ Here, it will generate new hash from block hash, parse hash to unsigned integer,
 4. Withdraw
 Once the draw winner was done, the user winner can now withdraw. To withdraw, first, the system will request to get the winner's id to transfer the balance and inserted it on the world state. Then the wallet will be updated then the user can now withdraw the prize. After the time was ended, it will start a new round for lottery.
 
+"# rng_loterry_hyperledger.xml" 
+1. Register user
+First the user need to register, then run the app. The system will set the duration time. It can be second, minutes, hours or day. Once the duration time was set, It will inserted on the world state. The system will set the duration time for lottery and ticket deadline the inserted the address on the world state.
+2. Reveal address and secret number
+After the user bought the ticket, it will verify the commitment hash and adding it to the generated address of the user and if failed to reveal and submit the address and secret number then it will dropped from the lottery.
+3. Draw winner
+Here, it will generate new hash from block hash, parse hash to unsigned integer, get the modulo of unsigned integer by the length of ID list and set the modulo to select the index of ID to set the winner's Id and it will inserted on the world state.
+4. Withdraw
+Once the draw winner was done, the user winner can now withdraw. To withdraw, first, the system will request to get the winner's id to transfer the balance and inserted it on the world state. Then the wallet will be updated then the user can now withdraw the prize. 
 
-
+"# powerball_loterry_hyperledger.xml" 
+1. Register user
+First the user need to register, then run the app. The system will set the duration time and have a new round once the duration time is done. It can be second, minutes, hours or day. Once the duration time was set, It will inserted on the world state.
+2. Buy ticket
+After the user bought the ticket, enter 6 digits number that has a limit from 1-99, then it will get the user's identity and add to the list of Id's and inserted on the world state.
+3. Draw winner
+Here, it will generate new hash from block hash, parse hash to unsigned integer, get the modulo of unsigned integer by the length of ID list and set the modulo to select the index of ID then match winning number and users number to set the winner's Id and it will inserted on the world state.
+4. Withdraw
+Once the draw winner was done, the user winner can now withdraw. To withdraw, first, the system will request to get the winner's id to transfer the balance and inserted it on the world state. Then the wallet will be updated then the user can now withdraw the prize. After the time was ended, it will start a new round for lottery.
 
