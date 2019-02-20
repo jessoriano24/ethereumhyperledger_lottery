@@ -1,7 +1,7 @@
 # ethereumhyperledger_lottery
 "# ethereumhyperledger_lottery" 
 
-This repository is about the documentation and design of both ethereum and hyperledger in lottery.
+This repository is about the documentation and design of lottery for ethereum and hyperledger.
 
 To view the design:
 1. Clone or download the repository.
